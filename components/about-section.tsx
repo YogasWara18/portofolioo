@@ -3,6 +3,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,15 +139,40 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image */}
-          <div ref={imageRef} className="relative">
-            <div className="aspect-4/5 rounded-3xl overflow-hidden">
-              <img
-                src=""
-                alt="About Me"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+<div ref={imageRef} className="relative">
+  <div className="aspect-4/5 rounded-3xl overflow-hidden">
+    <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={20}
+      slidesPerView={1}
+      loop={true}
+      navigation
+      pagination={{
+        clickable: true,
+        bulletClass: "swiper-pagination-bullet custom-bullet", // custom class
+        bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
+      }}
+      className="w-full h-full"
+    >
+      {[
+        "/purwadhika.png",
+        "/image1.png",
+        "/image2.png",
+        "/image3.png",
+        "/image4.png",
+        "/image5.png",
+      ].map((src, i) => (
+        <SwiperSlide key={i}>
+          <img
+            src={src}
+            alt={`Slide ${i + 1}`}
+            className="w-full h-full object-contain"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
 
           {/* Right - Content */}
           <div>
@@ -175,45 +205,17 @@ export default function AboutSection() {
               I focus on creating seamless user experiences that combine
               beautiful aesthetics with powerful functionality.
             </p>
-
-            {/* Stats */}
-            <div ref={statsRef} className="grid grid-cols-3 gap-8">
-              <div className="stat-item">
-                <span
-                  className="stat-number text-4xl md:text-5xl font-bold"
-                  data-value="5"
-                >
-                  0
-                </span>
-                <span className="text-4xl md:text-5xl font-bold">+</span>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Years Experience
-                </p>
-              </div>
-              <div className="stat-item">
-                <span
-                  className="stat-number text-4xl md:text-5xl font-bold"
-                  data-value="50"
-                >
-                  0
-                </span>
-                <span className="text-4xl md:text-5xl font-bold">+</span>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Projects Completed
-                </p>
-              </div>
-              <div className="stat-item">
-                <span
-                  className="stat-number text-4xl md:text-5xl font-bold"
-                  data-value="30"
-                >
-                  0
-                </span>
-                <span className="text-4xl md:text-5xl font-bold">+</span>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Happy Clients
-                </p>
-              </div>
+            {/* 3 Images in a row */}
+            <div className="grid grid-cols-3 gap-6">
+              {["/image1.png", "/image2.png", "/image3.png"].map((src, i) => (
+                <div key={i} className="rounded-xl overflow-hidden">
+                  <img
+                    src={src}
+                    alt={`Gallery ${i + 1}`}
+                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

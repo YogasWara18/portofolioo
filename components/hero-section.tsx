@@ -77,31 +77,30 @@ export default function HeroSection() {
           <div className="relative z-10">
             <div ref={labelRef} className="mb-8">
               <span className="inline-block text-xs tracking-[0.3em] uppercase text-muted-foreground font-medium">
-                Design Portfolio
+                My Portofolio
               </span>
             </div>
 
             <div ref={headingRef} className="mb-8">
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                  HELLO! <span className="text-primary/70 italic font-light">I&apos;M A</span>
+                <h1 className="hero-line text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+                  HELLO! <span className="text-primary/70 italic font-light">I&apos;M </span>
                 </h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                  WEB DEVELOPER
+                <h1 className="hero-line text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
+                  T. KURNIA YOGAS WARA
                 </h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-6xl lg:text-7xltracking-tight leading-[1.1] text-primary/60 italic font-light">
-                  + DESIGNER
+                <h1 className="hero-line text-5xl md:text-4xl lg:text-7xltracking-tight leading-[1.1] text-primary/60 italic font-light">
+                  FRONTEND WEB DEVELOPER
                 </h1>
               </div>
             </div>
 
             <p ref={subtitleRef} className="text-base text-muted-foreground max-w-md leading-relaxed mb-10">
-              Beautiful design has the power to captivate audiences and drive business growth. Specializing in creating
-              stunning designs that transform businesses worldwide.
+              With over a year of experience, I specialize in designing responsive, accessible, and innovative web interfaces. Driven by creativity, passion, and curiosity, I consistently deliver user‑focused solutions while maintaining high standards of performance and scalability. My relentless drive to explore new possibilities ensures continuous growth and the ability to adapt to emerging technologies.
             </p>
 
             <div ref={ctaRef} className="flex items-center gap-4">
@@ -115,7 +114,7 @@ export default function HeroSection() {
                 href="#contact"
                 className="px-8 py-4 border border-border rounded-full font-medium hover:bg-secondary transition-all duration-500"
               >
-                Get In Touch
+                View My Resume
               </a>
             </div>
           </div>
