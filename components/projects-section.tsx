@@ -173,7 +173,7 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="projects" className="py-32 px-6 relative overflow-hidden">
+    <section ref={sectionRef} id="projects" className="py-32 px-6 relative overflow-hidden bg-checkerboard">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div ref={titleRef} className="mb-20">

@@ -171,7 +171,7 @@ export default function SkillsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="skills" className="py-32 px-6 bg-secondary/20 relative">
+    <section ref={sectionRef} id="skills" className="py-32 px-6 bg-secondary/20 relative bg-checkerboard">
       <div className="max-w-7xl mx-auto">
         <div ref={titleRef} className="text-center mb-20">
           <div className="overflow-hidden">
