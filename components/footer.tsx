@@ -35,7 +35,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer ref={footerRef} className="py-12 px-6 border-t border-border">
+    <footer ref={footerRef} className="py-12 px-6 border-t border-border bg-checkerboard">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Logo */}

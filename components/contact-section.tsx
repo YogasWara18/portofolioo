@@ -129,7 +129,7 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-32 px-6 bg-secondary/20 relative overflow-hidden"
+      className="py-32 px-6 bg-secondary/20 relative overflow-hidden bg-checkerboard"
     >
       <div className="max-w-3xl mx-auto text-center">
         {/* Title */}
