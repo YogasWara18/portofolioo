@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ExternalLink, Github } from "lucide-react"
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ExternalLink, Github } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -22,7 +22,15 @@ const projects = [
     description:
       "The Palm Hotel website was developed using Next.js for performance and scalability, combined with TailwindCSS for responsive and consistent styling. The authentication system is managed with Auth.js, while Google Cloud and Neon are used for the backend and database infrastructure. Payment integration is handled through Midtrans, and the entire project was smoothly deployed using Vercel. This combination of technologies results in a modern, secure, and user-friendly website.",
     video: "/video2.mp4",
-    tags: ["Branding", "Design", "Marketing", "Development", "Payment", "Database", "Responsive" ],
+    tags: [
+      "Branding",
+      "Design",
+      "Marketing",
+      "Development",
+      "Payment",
+      "Database",
+      "Responsive",
+    ],
     liveUrl: "https://palm-hotel-apss.vercel.app/",
     githubUrl: "https://github.com/YogasWara18/Palm-Hotel",
   },
@@ -35,17 +43,17 @@ const projects = [
     liveUrl: "#",
     githubUrl: "#",
   },
-]
+];
 
 export default function ProjectsSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const titleRef = useRef<HTMLDivElement>(null)
-  const cardsRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
-      const titleLines = titleRef.current?.querySelectorAll(".title-line")
+      const titleLines = titleRef.current?.querySelectorAll(".title-line");
       if (titleLines && titleLines.length > 0) {
         gsap.fromTo(
           titleLines,
@@ -63,12 +71,12 @@ export default function ProjectsSection() {
               start: "top 75%",
             },
           }
-        )
+        );
       }
 
-      const cards = cardsRef.current?.querySelectorAll(".project-card")
+      const cards = cardsRef.current?.querySelectorAll(".project-card");
       cards?.forEach((card, index) => {
-        const isEven = index % 2 === 0
+        const isEven = index % 2 === 0;
 
         gsap.fromTo(
           card,
@@ -90,10 +98,10 @@ export default function ProjectsSection() {
               start: "top 80%",
             },
           }
-        )
+        );
 
-        const videoContainer = card.querySelector(".video-container")
-        const video = card.querySelector(".project-video")
+        const videoContainer = card.querySelector(".video-container");
+        const video = card.querySelector(".project-video");
 
         gsap.fromTo(
           videoContainer,
@@ -111,7 +119,7 @@ export default function ProjectsSection() {
               start: "top 80%",
             },
           }
-        )
+        );
 
         gsap.to(video, {
           y: -40,
@@ -122,35 +130,35 @@ export default function ProjectsSection() {
             end: "bottom top",
             scrub: 2,
           },
-        })
+        });
 
         card.addEventListener("mouseenter", () => {
           gsap.to(videoContainer, {
             duration: 0.6,
             ease: "power2.out",
             boxShadow: "0 30px 60px rgba(168, 85, 247, 0.3)",
-          })
+          });
           gsap.to(video, {
             duration: 0.6,
             ease: "power2.out",
             scale: 1.08,
-          })
-        })
+          });
+        });
 
         card.addEventListener("mouseleave", () => {
           gsap.to(videoContainer, {
             duration: 0.6,
             ease: "power2.out",
-            boxShadow: "0 0px 0px rgba(168, 85, 247, 20)",
-          })
+            boxShadow: "0 0px 0px rgba(168, 85, 247, 0)",
+          });
           gsap.to(video, {
             duration: 0.6,
             ease: "power2.out",
             scale: 1,
-          })
-        })
+          });
+        });
 
-        const contentElements = card.querySelectorAll(".content-animate")
+        const contentElements = card.querySelectorAll(".content-animate");
         gsap.fromTo(
           contentElements,
           { y: 40, opacity: 0 },
@@ -165,12 +173,12 @@ export default function ProjectsSection() {
               start: "top 80%",
             },
           }
-        )
-      })
-    }, sectionRef)
+        );
+      });
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
@@ -183,12 +191,12 @@ export default function ProjectsSection() {
         <div ref={titleRef} className="mb-20">
           <div className="overflow-hidden">
             <h2 className="title-line text-5xl md:text-6xl lg:text-7xl font-bold">
-              Selected
+              Web Development
             </h2>
           </div>
           <div className="overflow-hidden">
             <h2 className="title-line text-5xl md:text-6xl lg:text-7xl font-bold text-primary/60 italic">
-              Projects
+              Showcase
             </h2>
           </div>
         </div>
@@ -271,5 +279,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
