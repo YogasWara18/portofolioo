@@ -18,7 +18,6 @@ export default function HeroSection() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } })
 
-      // Label reveal
       tl.fromTo(labelRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.2)
 
       const lines = headingRef.current?.querySelectorAll(".hero-line")
@@ -36,10 +35,7 @@ export default function HeroSection() {
         )
       }
 
-      // Subtitle slide up
       tl.fromTo(subtitleRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, 1)
-
-      // CTA fade in
       tl.fromTo(ctaRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 1.2)
 
       tl.fromTo(
@@ -72,57 +68,73 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center px-6 pt-32 pb-20 overflow-hidden bg-checkerboard"
+      className="relative min-h-screen flex items-center px-6 pt-24 pb-20 overflow-hidden bg-checkerboard"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Mobile/Tablet Image */}
+          <div className="relative block lg:hidden mb-10">
+            <div className="relative aspect-3/4 w-full max-w-md mx-auto overflow-hidden rounded-2xl">
+              <img
+                src="/hero.jpg"
+                alt="Developer Portrait"
+                className="w-full h-full object-cover hover:grayscale transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
+            </div>
+          </div>
+
           {/* Left content */}
           <div className="relative z-10">
-            <div ref={labelRef} className="mb-8">
+            <div ref={labelRef} className="mb-6">
               <span className="inline-block text-xs tracking-[0.3em] uppercase text-muted-foreground font-medium">
-                My Portofolio
+                My Portfolio
               </span>
             </div>
 
-            <div ref={headingRef} className="mb-8">
+            <div ref={headingRef} className="mb-6 space-y-2">
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+                <h1 className="hero-line text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   HELLO! <span className="text-primary/70 italic font-light">I&apos;M </span>
                 </h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
+                <h1 className="hero-line text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   T. KURNIA YOGAS WARA
                 </h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="hero-line text-5xl md:text-4xl lg:text-7xl tracking-tight leading-[1.1] text-primary/60 italic font-light">
+                <h1 className="hero-line text-2xl md:text-4xl lg:text-7xl tracking-tight leading-[1.1] text-primary/60 italic font-light">
                   FRONTEND WEB DEVELOPER
                 </h1>
               </div>
             </div>
 
-            <p ref={subtitleRef} className="text-base text-muted-foreground max-w-md leading-relaxed mb-10">
-              With over a year of experience, I specialize in designing responsive, accessible, and innovative web interfaces. Driven by creativity, passion, and curiosity, I consistently deliver user‑focused solutions while maintaining high standards of performance and scalability. My relentless drive to explore new possibilities ensures continuous growth and the ability to adapt to emerging technologies.
+            <p
+              ref={subtitleRef}
+              className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed mb-8"
+            >
+              With over a year of experience, I specialize in designing responsive, accessible, and innovative web interfaces. Driven by creativity, passion, and curiosity, I consistently deliver user‑focused solutions while maintaining high standards of performance and scalability.
             </p>
 
-            <div ref={ctaRef} className="flex items-center gap-4">
+            <div ref={ctaRef} className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#projects"
-                className="group px-8 py-4 bg-foreground text-background rounded-full font-medium transition-all duration-500 hover:bg-primary hover:scale-105"
+                className="group w-full sm:w-auto px-8 py-4 bg-foreground text-background rounded-full font-medium transition-all duration-500 hover:bg-primary hover:scale-105 text-center"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="px-8 py-4 border border-border rounded-full font-medium hover:bg-secondary transition-all duration-500"
+                className="w-full sm:w-auto px-8 py-4 border border-border rounded-full font-medium hover:bg-secondary transition-all duration-500 text-center"
               >
                 View My Resume
               </a>
             </div>
           </div>
 
-          {/* Right image */}
+          {/* Right image (Desktop only) */}
           <div ref={imageRef} className="relative hidden lg:block">
             <div className="relative aspect-3/4 w-full max-w-lg ml-auto overflow-hidden rounded-3xl">
               <img
