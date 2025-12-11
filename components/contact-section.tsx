@@ -8,11 +8,11 @@ import { Mail, MessageCircle, Linkedin, Github, Instagram, ArrowUpRight } from "
 gsap.registerPlugin(ScrollTrigger)
 
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/1234567890" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
+  { icon: Mail, label: "Email", href: "https://mail.google.com/mail/?view=cm&fs=1&to=teukukurniayogaswara@gmail.com" },
+  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/+6281234701212" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/t-kurnia-yogas-wara-604b64338" },
+  { icon: Github, label: "GitHub", href: "https://github.com/YogasWara18" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com/yogaswara04/" },
 ]
 
 export default function ContactSection() {
@@ -136,12 +136,12 @@ export default function ContactSection() {
         <div ref={titleRef} className="mb-8">
           <div className="overflow-hidden">
             <h2 className="title-line text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]">
-              Let&apos;s Discuss
+              Professional Contact
             </h2>
           </div>
           <div className="overflow-hidden">
-            <h2 className="title-line text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-muted-foreground">
-              Your Ideas
+            <h2 className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md mx-auto">
+             Let’s Build Something Together
             </h2>
           </div>
         </div>
@@ -151,14 +151,13 @@ export default function ContactSection() {
           ref={subtitleRef}
           className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md mx-auto"
         >
-          Have a project in mind? I&apos;d love to hear about it. Drop me a message and let&apos;s
-          create something amazing.
+          “I’m open to collaborations, projects, or just a friendly chat. Let’s connect through the channels below.”
         </p>
 
         {/* CTA Button */}
         <div ref={ctaRef} className="mb-16">
           <a
-            href="mailto:hello@example.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=teukukurniayogaswara@gmail.com"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-medium transition-all duration-500 hover:bg-primary hover:scale-105"
           >
             Get in Touch
