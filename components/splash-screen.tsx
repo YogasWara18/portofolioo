@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import gsap from "gsap"
+import Image from "next/image"
 
 export default function SplashScreen() {
   useEffect(() => {
@@ -47,12 +48,16 @@ export default function SplashScreen() {
   return (
     <div className="splash-screen fixed inset-0 z-50 flex items-center justify-center bg-background">
       {/* Logo/Center Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-4">
-        <div className="text-6xl md:text-8xl font-bold bg-linear-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent">
-          {"{"}
-        </div>
-        <p className="text-lg md:text-xl text-foreground/60 font-light tracking-widest uppercase">Portfolio</p>
+    <div>
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={250}
+          height={250}
+          className="drop-shadow-lg"
+        />
       </div>
+
 
       {/* Left Curtain */}
       <div className="curtain-left fixed left-0 top-0 h-full w-1/2 bg-background z-40" />
