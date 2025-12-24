@@ -1,11 +1,13 @@
 "use client"
 
+import Link from "next/link"
+
 export default function Footer() {
   return (
     <footer className="py-6 px-6 border-t border-border bg-checkerboard flex items-center justify-center">
-      <p className="text-muted-foreground text-sm text-center">
-        ©{new Date().getFullYear()} Portfolio | Yogas Wara | All Rights Reserved.
-      </p>
+      <p className="text-sm mt-1 text-center">
+          © {new Date().getFullYear()}. All Rights Reserved By <Link href="https://www.linkedin.com/in/t-kurnia-yogas-wara-604b64338/" className="transition-all duration-300 text-gray-800 font-semibold text-md hover:text-(--prim)">T. Kurnia Yogas Wara</Link>
+        </p>
     </footer>
   )
 }

@@ -115,7 +115,7 @@ export default function HeroSection() {
               ref={subtitleRef}
               className="text-sm md:text-base text-muted-foreground max-w-md leading-relaxed mb-8"
             >
-              With over a year of experience, I specialize in designing responsive, accessible, and innovative web interfaces. Driven by creativity, passion, and curiosity, I consistently deliver user‑focused solutions while maintaining high standards of performance and scalability.
+              With over a year of experience, I specialize in designing responsive, accessible, and innovative web interfaces. Driven by creativity, passion, and curiosity, I consistently deliver user focused solutions while maintaining high standards of performance and scalability.
             </p>
 
             <div ref={ctaRef} className="flex flex-col sm:flex-row items-center gap-4">
