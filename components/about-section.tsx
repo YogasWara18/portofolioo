@@ -93,8 +93,6 @@ export default function AboutSection() {
                   "/HTML-Sololearn.jpg",
                   "/CSS-Sololearn.jpg",
                   "/JavaScript-Sololearn.jpg",
-                  "/image4.png",
-                  "/image5.png",
                 ].map((src, i) => (
                   <SwiperSlide key={i}>
                     <img src={src} alt={`Slide ${i + 1}`} className="w-full h-full object-contain" />
