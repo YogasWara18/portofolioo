@@ -77,6 +77,28 @@ const projects = [
     githubUrl: "https://github.com/YogasWara18/nature",
      date: "December 2025",
   },
+  {
+    title: "Burger Café Bar – Build with Next.js & Bootstrap",
+    description:
+      "The Burger Café Bar website is a professional frontend project showcasing culinary branding with a modern, interactive, and high performance approach. Built using Next.js as the primary framework and Bootstrap for its grid system and responsive components, the website delivers a clean and consistent appearance across multiple devices.",
+    video: "/Thumbnail-Burger.mp4",
+    tags: [
+      "Design",
+      "Animation",
+      "Development",
+      "Branding",
+      "Responsive",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Bootstrap",
+      "RestAPI",
+      "Vercel"
+    ],
+    liveUrl: "https://burger-cafe-bar.vercel.app/",
+    githubUrl: "https://github.com/YogasWara18/Burger-Cafe-Bar",
+     date: "January 2026",
+  },
 ];
 
 export default function ProjectsSection() {
