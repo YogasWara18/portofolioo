@@ -32,7 +32,7 @@ const projects = [
 
   },
   {
-    title: "Palm Hotel – Modern Build with Next.js & Cloud Integration",
+    title: "Palm Hotel – Modern Build with Next.js TypeScript & Cloud Integration",
     description:
       "The Palm Hotel website was developed using Next.js for performance and scalability, combined with TailwindCSS for responsive and consistent styling. The authentication system is managed with Auth.js, while Google Cloud and Neon are used for the backend and database infrastructure. Payment integration is handled through Midtrans, and the entire project was smoothly deployed using Vercel. This combination of technologies results in a modern, secure, and user friendly website.",
     video: "/Thumbnail-video-PalmHotel.mp4",
@@ -78,7 +78,7 @@ const projects = [
      date: "December 2025",
   },
   {
-    title: "Burger Café Bar – Build with Next.js & Bootstrap",
+    title: "Burger Café Bar – Build with Next.js TypeScript & Bootstrap",
     description:
       "The Burger Café Bar website is a professional frontend project showcasing culinary branding with a modern, interactive, and high performance approach. Built using Next.js as the primary framework and Bootstrap for its grid system and responsive components, the website delivers a clean and consistent appearance across multiple devices.",
     video: "/Thumbnail-Burger.mp4",
